@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jam dinding</title>
+    <style>
+        
+      html, 
+      body
+      {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background: #222;
+        overflow: auto;
+        text-align: center;
+        font-family: "Trebuchet MS";
+      }
+      
+      * 
+      { box-sizing: border-box; }
+      
+      #clock-wrapper
+      {
+        width: 320px;
+        height: 320px;
+        background: #3058d0;
+        border-radius: 50%;
+        position: relative;
+        margin: 70px auto 70px auto;
+        border: 10px outset royalblue;
+        box-shadow: 5px 5px 10px #161616;
+      }
+      
+      span,
+      #clock-center,
+      #clock-second,
+      #clock-minute,
+      #clock-hour,
+      #inner-circle
+      {
+        display: inline-block;
+        position: absolute;
+      }
+      
+      #clock-center
+      {
+        height: 15px;
+        width: 15px;
+        margin: auto;
+        background: #ff7af9;
+        top: 142.5px;
+        left: 143px;
+        border-radius: 50%;
+        z-index: 5;
+      }
+      
+      #clock-second
+      {
+        width: 1px;
+        height: 130px;
+        background: white;
+        top: 19px;
+        left: 150px;
+        z-index: 4;
+        border-radius: 0.5px;
+      }
+      
+      #clock-minute
+      {
+        width: 3.5px;
+        height: 127.5px;
+        background: #ff7af9;
+        top: 22px;
+        left: 149px;
+        z-index: 3;
+        border-radius: 1.75px;
+      }
+      
+      #clock-hour
+      {
+        width: 5.5px;
+        height: 85px;
+        background: yellow;
+        top: 64.5px;
+        left: 148px;
+        border-radius: 2.75px;
+        z-index: 2;
+      }
+      
+      #clock-second,
+      #clock-minute,
+      #clock-hour
+      {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: 50% 100%;
+        -webkit-transition: -webkit-transform 0.75s;
+        transform: rotate(0deg);
+        transform-origin: 50% 100%;
+        transition: transform 0.75s;
+      }
+      
+      .digits
+      {
+        width: 3px;
+        height: 18px;
+        background: yellow;
+        border-radius: 1.5px;
+        z-index: 2;
+      }
+      
+      .displayed-digits
+      {
+        color: gainsboro;
+        font-weight: bolder;
+        font-size: 22px;
+        font-family: Sans;
+        z-index: 0;
+      }
+      
+      span:nth-of-type(1)
+      {
+        top: 16px;
+        left: 138px;
+      }
+      
+      span:nth-of-type(2)
+      {
+        top: 137px;
+        right: 20px;
+      }
+      
+      span:nth-of-type(3)
+      {
+        bottom: 18px;
+        left: 144px;
+      }
+      
+      span:nth-of-type(4)
+      {
+        top: 137px;
+        left: 22px;
+      }
+      
+      #inner-circle
+      {
+        top: 39px;
+        left: 40px;
+        width: 220px;
+        height: 220px;
+        border: 2px solid royalblue;
+        border-radius: 50%;
+      }
+      
+      .mini-digits
+      {
+        width: 1.5px;
+        height: 6px;
+        border-radius: 0.75px;
+        background: gainsboro;
+      }
+      
+      #am-pm
+      {
+        left: 130px;
+        top: 170px;
+        color: royalblue;
+        background: darkblue;
+        padding: 3px 10px;
+        border-radius: 3px;
+        z-index: 0;
+        font-weight: bolder;
+        font-size: 85%;
+        letter-spacing: 2px;
+      }
+      
+      #my-name         
+      { 
+        display: inline-block; 
+        background: #333; 
+        padding: 7px 13px;
+        position: relative;
+        border-radius: 20px;
+        font-size: 80%;
+        color: #777;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#222" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+  </head>
+
+  <body>
+    <div id="clock-wrapper">
+      <div id="clock-center"></div>
+      <div id="clock-second"></div>
+      <div id="clock-minute"></div>
+      <div id="clock-hour"></div>
+      <div id="inner-circle"></div>
+      <span class="displayed-digits">12</span>
+      <span class="displayed-digits">3</span>
+      <span class="displayed-digits">6</span>
+      <span class="displayed-digits">9</span>
+      <span id="am-pm">AM</span>
+    </div>
+    <div id="my-name"> - #Power'f GOD⚡⚡ </div>
+  </body>
+
+  <script>
+      
+
+var ID = document.getElementById.bind(document);
+
+
+this.onload = function()
+{
+  var sec, min, hr, clock, secondHand, minuteHand, hourHand, secDeg, minDeg, hrDeg, radius, start, i, spanDeg, top, right, clockIsPaused;
+  
+  function loadClock()
+  {
+    sec = new Date().getSeconds() + 2;
+    min = new Date().getMinutes();
+    hr = new Date().getHours();
+    clock = ID("clock-wrapper");
+    secondHand = ID("clock-second");
+    minuteHand = ID("clock-minute");
+    hourHand = ID("clock-hour");
+    
+    secDeg = (sec * 6);    
+    minDeg = (min + (sec / 60)) * 6; 
+    hrDeg = ((hr - 12) * 30) + ((min / 60) * 30);
+  }
+  document.addEventListener("visibilitychange", loadClock);
+  loadClock();
+  
+  radius = ((clock.offsetWidth - 20) / 2);
+  
+  function clockFunc()
+  {
+    secondHand.style.WebkitTransform = "rotate(" + secDeg + "deg)";
+    minuteHand.style.WebkitTransform = "rotate(" + minDeg + "deg)";
+    hourHand.style.WebkitTransform = "rotate(" + hrDeg + "deg)";
+    secondHand.style.transform = "rotate(" + secDeg + "deg)";
+    minuteHand.style.transform = "rotate(" + minDeg + "deg)";
+    hourHand.style.transform = "rotate(" + hrDeg + "deg)";
+   
+    secDeg += 6;    minDeg += 0.1;    hrDeg += 0.1/60;
+    hr = new Date().getHours();
+    if (hr > 11)
+      ID("am-pm").innerHTML = "PM";
+    else
+      ID("am-pm").innerHTML = "AM";
+  }
+  function startClock()
+  { start = setInterval(clockFunc, 1000); }
+  startClock();
+
+ 
+
+  //creating hours strokes (with the <span> tag) ----->
+  
+  for (i = 0, spanDeg = 0; i < 12; i++, spanDeg += 30)
+  {
+    top = (Math.cos(spanDeg * Math.PI/180) * (radius - 10)).toFixed(6);
+    right = (Math.sin(spanDeg * Math.PI/180) * (radius - 10)).toFixed(6);
+    
+    clock.insertAdjacentHTML("beforeend", "<span class='digits d" + i + "'></span>");
+    clock.getElementsByClassName("d"+i)[0].style.WebkitTransform = "rotate(" + spanDeg + "deg)";
+    clock.getElementsByClassName("d"+i)[0].style.transform = "rotate(" + spanDeg + "deg)";
+    clock.getElementsByClassName("d"+i)[0].style.top = ((radius - 9.5) - top) + "px";
+    clock.getElementsByClassName("d"+i)[0].style.right = ((radius - 1.5) - right) + "px";
+  }
+  
+  for (i = 0, spanDeg = 0; i < 60; i++, spanDeg += 6)
+  {
+    if (spanDeg % 30 !== 0)
+    {
+      top = (Math.cos(spanDeg * Math.PI/180) * (radius - 10)).toFixed(6);
+      right = (Math.sin(spanDeg * Math.PI/180) * (radius - 10)).toFixed(6);
+      
+      clock.insertAdjacentHTML("beforeend", "<span class='mini-digits md" + i + "'></span>");
+      clock.getElementsByClassName("md"+i)[0].style.WebkitTransform = "rotate(" + spanDeg + "deg)";
+      clock.getElementsByClassName("md"+i)[0].style.transform = "rotate(" + spanDeg + "deg)";
+      clock.getElementsByClassName("md"+i)[0].style.top = ((radius - 4) - top) + "px";
+      clock.getElementsByClassName("md"+i)[0].style.right = ((radius - 0.5) - right) + "px";
+    }
+    else continue;
+  }
+  
+  ID("my-name").onclick = function()
+  {
+    if (clockIsPaused)
+      clockIsPaused = false,
+      loadClock(),
+      setTimeout(startClock, 0);
+    else
+      clockIsPaused = true,
+      clearInterval(start);
+  };
+};
+
+  </script>
+</html>

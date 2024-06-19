@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegitigaTerbalik</title>
+</head>
+<body>
+    <h2>Segitiga terbalik</h2>
+    <p id="gambar"></p>
+
+    <script>
+        let string = '';
+        for (let i = 0; i<7; i++) {
+            string += '*';
+            for (let j = 0; j<i; j++) {
+                string += '*';
+            }
+            string += '<br>';
+        }
+        for (let x = 6; x<13; x++) {
+            string += '*';
+            for (let y = 12; y>x; --y) {
+                string += '*';
+            }
+            string += '<br>'
+        }
+        document.getElementById('gambar').innerHTML = string;
+    </script>
+</body>
+</html>

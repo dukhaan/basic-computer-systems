@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persegi</title>
+</head>
+<body>
+    <h2>Persegi</h2>
+    <p id="gambar"></p>
+
+    <script>
+        let string = '';
+        for (let i = 0; i<5; i++) {
+            string += '*';
+            for (let j = 0; j<9; j++) {
+                string += '*';
+            }
+            string += '<br>';
+        }
+        
+        document.getElementById('gambar').innerHTML = string;
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" />
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,n=[],t=!1,r=[],s=[],o=!0,a=function(e,i,t,r,s,o,a){var l=this;this.name=e,this.funcName=i,this.parameters=null===t?null:t instanceof Array?t:[t],this.isBlock=r,this.blockedBy=s,this.deleteWhenComplete=o,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),l.isInitialized=!0,l.isComplete=!0,f("... func.apply: "+e);var i=l.funcName.split("."),t=null;i.length>3||(t=3===i.length?window[i[0]][i[1]][i[2]]:2===i.length?window[i[0]][i[1]]:window[l.funcName]),null!=t&&t.apply(null,this.parameters),!0===l.deleteWhenComplete&&delete n[e],!0===l.isBlock&&(f("----- F'D: "+l.name),m())}},l=function(e,i,n,t,r,s,o){var a=this;this.name=e,this.path=i,this.async=r,this.defer=s,this.isBlock=n,this.blockedBy=t,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=o,this.isTimeDelay=!1,this.process=function(){a.isInitialized=!0,f("... file = "+e);var n=document.createElement("script");n.src=i,!0===r?n.async=!0:!0===s&&(n.defer=!0),n.onerror=function(){f("----- ERR'D: "+a.name),a.isError=!0,!0===a.isBlock&&m()},n.onreadystatechange=n.onload=function(){var e=n.readyState;f("----- F'D: "+a.name),e&&!/loaded|complete/.test(e)||(a.isComplete=!0,!0===a.isBlock&&m())},document.getElementsByTagName("head")[0].appendChild(n)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=o&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===t)return f(e.name+" blocked = TIME DELAY!"),!0;if(e.blockedBy instanceof Array)for(var i=0;i<e.blockedBy.length;i++){var r=e.blockedBy[i];if(!1===n.hasOwnProperty(r))return f(e.name+" blocked = "+r),!0;if(!0===e.proceedIfError&&!0===n[r].isError)return!1;if(!1===n[r].isComplete)return f(e.name+" blocked = "+r),!0}return!1}function f(e){var i=window.location.href,n=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(n?n[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),u(r),u(s))}function u(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var n=e[i];!0===n.isComplete||h(n)||!0===n.isInitialized||!0===n.isError?!0===n.isError?f(n.name+": error"):!0===n.isComplete?f(n.name+": complete already"):!0===n.isInitialized&&f(n.name+": initialized already"):n.process()}}return window.addEventListener("load",(function(){setTimeout((function(){t=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:function(e,i,t,o,a,c,h,f){var m=new l(e,i,t,o,a,c,h);!0===f?r[e]=m:s[e]=m,n[e]=m,d(m)},addDelayFile:function(e,i){var t=new l(e,i,!1,[],!1,!1,!0);t.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=t,n[e]=t,d(t)},addFunc:function(e,t,o,l,c,h,f,m,u){!0===h&&(e=e+"_"+i++);var p=new a(e,t,o,l,c,f,m);!0===u?r[e]=p:s[e]=p,n[e]=p,d(p)},addDelayFunc:function(e,i,t){var r=new a(e,i,t,!1,[],!0,!0);r.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=r,n[e]=r,d(r)},items:n,processAll:m,setallowLoad:function(e){o=e},markLoaded:function(e){if(e&&0!==e.length){if(e in n){var i=n[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else n[e]=new c(e,!0);f("markLoaded dummyfile: "+n[e].name)}},logWhatsBlocked:function(){for(var e in n)!1!==n.hasOwnProperty(e)&&h(n[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":1,"ad_count_adjustment":1,"ad_lazyload_version":14,"ad_load_version":1,"ad_location_ids":"","ad_transform_level":0,"adx_ad_count":0,"bidder_method":1,"bidder_version":3,"city":"Sidoarjo","country":"ID","days_since_last_visit":-1,"display_ad_count":0,"domain_id":291247,"ds_adsize_opt_id":-1,"engaged_time_visit":46,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"1661907885198","last_pageview_id":"71d7cf52-61c4-40d3-6159-d9980950e4f0","lt_cache_level":0,"max_ads":2,"metro_code":0,"optimization_version":1,"page_ad_positions":"","page_view_count":2,"page_view_id":"413192a3-ac50-4a3d-4ba8-df04d9a10747","position_selection_id":46,"postal_code":"","pv_event_count":0,"response_size_orig":762,"response_time_orig":4,"serverid":"13.229.249.87:32130","state":"JI","sub_page_ad_positions":"","t_epoch":1661907907,"template_id":147,"time_on_site_visit":591,"url":"https://www.tutorialstonight.com/lib/examples/js-example-code?q=hollow-triangle-star-pattern","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":12,"worst_bad_word_level":0};var _ezim_d = {};var _ezat = {"domain_id":291247,"form_factor_id":1,"framework_id":1,"pageview_date":"2022-08-30","pageview_id":"413192a3-ac50-4a3d-4ba8-df04d9a10747","template_id":147,"url":"https://www.tutorialstonight.com/lib/examples/js-example-code?q=hollow-triangle-star-pattern","visit_uuid":"a5127163-b0d4-41cd-7dd5-e39464fe68aa"};</script><script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=195-3&bv=149&v=62&PageSpeed=off', true, [], true, false, false, true);</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hollow triangle star pattern - javascript</title>
+<style id='ezoicCSS'>.ezoic-ad{display:inline-block;border:0px;}.ezoic-ad>div>iframe{margin:0px!important;padding:0px!important;}
+.ezoic-floating-bottom { display: none!important; }</style><link rel='canonical' href='https://tutorialstonight.com/lib/examples/js-example-code?q=hollow-triangle-star-pattern' />
+<script type="text/javascript">var ezouid = "1";</script><base href="https://www.tutorialstonight.com/lib/examples/js-example-code?q=hollow-triangle-star-pattern"><script type='text/javascript'>
+var ezoTemplate = 'pub_site_noads';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script>
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 291247;
+var ezdomain = 'tutorialstonight.com';
+var ezoicSearchable = 1;
+</script>
+
+
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_291247=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["413192a3-ac50-4a3d-4ba8-df04d9a10747", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script>
+<script type="text/javascript">var _audins_dom="tutorialstonight_com",_audins_did=291247;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-3&cb=04-3y02-8y06-13y07-2y0b-6y0d-21y13-4y17-5y21-3y2f-4y57-2&cmbcb=105&sj=x04x02x06x07x0bx0dx13x17x21x2fx57&abt=HourlyCPM', true, [], true, false, true, false);</script>
+<script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-3&cb=03-8y0c-6y18-5&cmbcb=105&sj=x03x0cx18&abt=HourlyCPM', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head>
+<body>
+<h1>INI ADALAH SEGITIGA</h1>
+<script>
+    let n = 6;
+    let string = "";
+
+    for (let i = 1; i <= n; i++) {
+      // printing star
+      for (let j = 0; j < i; j++) {
+        if (i === n) {
+          string += "*";
+        }
+        else {
+          if (j == 0 || j == i - 1) {
+            string += "*";
+          }
+          else {
+            string += " ";
+          }
+        }
+      }
+      string += "\n";
+    }
+    // printing the string
+    document.write(`<pre>${string}</pre>`);
+  </script>
+<script type="text/javascript">
+        var __inScopeForCCPA = false;
+    function __uspapi(command, version, callback) {
+      var response = null;
+      var successs = false;
+      if (command === "getUSPData" && version === 1) {
+        var uspString = "1"; // Version
+        if (__inScopeForCCPA) {
+          uspString += "Y"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+          var result;
+          var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+          if (consentCookie === "nonconsent") {
+            uspString += "Y";
+          }
+          else {
+            uspString += "N";
+          }
+          uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+        }
+        else {
+          uspString += "---";
+        }
+        response = {
+          uspString: uspString,
+          version: 1
+        };
+        success = true;
+      }
+      return callback(response, success);
+    };
+    function __receiveUspapiMessage(event) {
+      if (event.data.hasOwnProperty('__uspapiCall')) {
+        __uspapi('getUSPData', 1, function(uspData, success) {
+          event.source.postMessage({
+            __uspapiReturn: {
+              returnValue: uspData,
+              success: success,
+              callId: event.data.__uspapiCall.callId
+            }
+          },
+          event.origin);
+        });
+      }
+      return null;
+    };
+    window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script type="text/javascript" data-cfasync="false"></script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+    var setCookie = function( name, content, expiry ) {
+      return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+    };
+    var ffid = 1;
+    var oh = window.screen.height;
+    var ow = window.screen.width;
+    var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+    var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+    var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+    var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+    setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+    setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+  })();</script><script type='text/javascript' style='display:none;' async>
+</script>
+</body></html>

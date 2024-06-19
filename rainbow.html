@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js rain</title>
+    </head>
+
+    <body>
+        <canvas id="Canvas"></canvas>
+    </body>
+
+    <script>
+        alert("A very simple rain simulation with js.");
+
+"use strict";
+// constants
+const g = 0.2;
+// variables
+let c, ctx, W, H;
+let raindrops = [];
+
+class RainParticle {
+    constructor() {
+        this.x = Math.random() * W;
+        this.y = 0;
+        this.vy = Math.random() * (2 - 1) + 1;
+    }
+    
+    update() {
+        this.vy += g;
+        this.y += this.vy;
+    };
+    
+    draw() {
+        ctx.fillRect(this.x, this.y, 1, 10);
+    };
+}
+
+// functions
+const setup = () => {
+    // canvas setup
+    c = document.getElementById("Canvas");
+    ctx = c.getContext("2d");
+    // canvas --> full screen
+    c.width = W = window.innerWidth;
+    c.height = H = window.innerHeight;
+    
+    // begin animation
+    window.requestAnimationFrame(animate);
+};
+
+const animate = () => {
+    // clear canvas & lower alpha before updating animation
+    ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+    ctx.fillRect(0, 0, W, H);
+    // create a new rain particle per frame
+    raindrops.push(new RainParticle());
+    ctx.fillStyle = "rgb(255, 255, 255)";
+    for (let i = raindrops.length - 1; i > 0; i--) {
+        raindrops[i].update();
+        raindrops[i].draw();
+        // remove particles for performance
+        if (raindrops[i].y >= c.height)
+            raindrops.splice(i, 1);
+    }
+    
+    // call animation function again
+    window.requestAnimationFrame(animate);   
+};
+
+// make sure js starts after everything is loaded
+window.onload = setup;
+    </script>
+</html>

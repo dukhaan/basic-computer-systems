@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menggambar bebas</title>
+</head>
+<body>
+    <h2>Segitiga sama kaki</h2>
+    <p id="gambar"></p>
+
+    <script>
+    let n = 6;
+    let string = "";
+
+    for (let i = 1; i <= n; i++) {
+      // printing star
+      for (let j = 0; j < i; j++) {
+        if (i === n) {
+          string += "*";
+        }
+        else {
+          if (j == 0 || j == i - 1) {
+            string += "*";
+          }
+          else {
+            string += " ";
+          }
+        }
+      }
+      string += "\n";
+    }
+    // printing the string
+    document.write(`<pre>${string}</pre>`);
+    </script>
+</body>
+</html>
